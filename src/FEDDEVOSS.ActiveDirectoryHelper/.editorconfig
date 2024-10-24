@@ -1,0 +1,10 @@
+# Remove the line below if you want to inherit .editorconfig settings from higher directories
+
+# C# files
+[*.cs]
+
+#### Core EditorConfig Options ####
+
+# IDE0073: File header
+dotnet_diagnostic.IDE0073.severity = error
+file_header_template = /******************************************************************************\n* The CC0 1.0 Universal License\n* Copyright (c) 2024 FED DEV Open Source Software\n*\n* The person who associated a work with this deed has dedicated the work to\n* the public domain by waiving all of his or her rights to the work worldwide\n* under copyright law, including all related and neighboring rights, to the\n* extent allowed by law.\n*\n* You can copy, modify, distribute and perform the work, even for commercial\n* purposes, all without asking permission.\n*\n* The above copyright notice and this permission notice shall be included in\n* all copies or substantial portions of the Software.\n*\n* THE SOFTWARE IS PROVIDED AS IS, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR\n* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,\n* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE\n* AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER\n* LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,\n* OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE\n* SOFTWARE.\n*******************************************************************************/

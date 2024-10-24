@@ -1,0 +1,378 @@
+###############################################################################
+# Set GitHub linguist, ignoring languages.
+# Overriding GitHub Linguist
+###############################################################################
+*.js linguist-detectable=false
+*.css linguist-detectable=false
+*.html linguist-detectable=false
+docs/* linguist-documentation
+docs/formatter.rb linguist-documentation=false
+
+###############################################################################
+# Set default behavior to automatically normalize line endings.
+##   Handle line endings automatically for files detected as
+##   text and leave all files detected as binary untouched.
+##   This will handle all files NOT defined below.
+###############################################################################
+* text=auto
+
+#
+# The above will handle all files NOT found below
+#
+# These files are text and should be normalized (Convert crlf => lf)
+*.gitattributes text
+.gitignore text
+*.md text diff=markdown
+
+# Ignore files (like .npmignore or .gitignore)
+*.*ignore text
+#
+# Exclude files from exporting
+#
+
+.gitattributes export-ignore
+.gitignore export-ignore
+
+#
+# Enable syntax highlighting for files with `.gitattributes` extensions.
+#
+*.gitattributes linguist-language=gitattributes
+
+###############################################################################
+# Make sh files under the build directory always have LF as line endings
+###############################################################################
+*.sh eol=lf
+
+###############################################################################
+# Make gradlew always have LF as line endings
+###############################################################################
+gradlew eol=lf
+
+###############################################################################
+# Set default behavior for command prompt diff.
+#
+# This is need for earlier builds of msysgit that does not have it on by
+# default for csharp files.
+# Note: This is only used by command line
+###############################################################################
+
+# Binary files
+# ============
+*.db binary
+*.exe binary
+*.p binary
+*.pkl binary
+*.pickle binary
+*.pyc binary export-ignore
+*.pyo binary export-ignore
+*.pyd binary
+
+# Source code
+*.ascx text
+*.bash text eol=lf
+*.bat text eol=crlf
+*.cd text
+*.cdxml text eol=crlf
+*.cmd text eol=crlf
+*.coffee text
+*.config text
+*.cs text diff=csharp
+*.cshtml text
+#*.cshtml text diff=html
+*.css text diff=css
+*.csx text diff=csharp
+*.dtd text
+*.edmx text
+*.htm text diff=html
+*.html text diff=html
+*.inc text
+*.ini text
+*.js text
+*.json text
+*.jsx text
+*.less text
+*.ls text
+*.map text -diff
+*.msbuild text
+*.msh text eol=crlf
+*.msh1 text eol=crlf
+*.msh2 text eol=crlf
+*.mshxml text eol=crlf
+*.msh1xml text eol=crlf
+*.msh2xml text eol=crlf
+*.mcf text eol=crlf
+*.nuspec text
+*.od text
+*.onlydata text
+*.php text diff=php
+*.pl text
+*.ps1 text eol=crlf
+*.ps1x text eol=crlf
+*.psm1 text eol=crlf
+*.psd1 text eol=crlf
+*.ps1xml text eol=crlf
+*.pssc text eol=crlf
+*.psrc text eol=crlf
+*.pxd text diff=python
+*.py text diff=python
+*.py3 text diff=python
+*.pyw text diff=python
+*.pyx text diff=python
+*.pyz text diff=python
+*.pyi text diff=python
+*.rb text diff=ruby
+*.resx text
+*.ruleset text
+*.sass text
+*.scm text
+*.scss text diff=css
+*.sh text eol=lf
+*.sql text
+*.sql linguist-detectable=true
+*.sql linguist-language=sql
+*.styl text
+*.StyleCop text
+*.tag text
+*.targets text
+*.ts text
+*.tsx text
+*.tt text
+*.txt text
+*.vb text
+*.vbhtml text
+*.vbs text
+*.wsf text
+*.xhtml text diff=html
+*.xml text
+*.xunit text
+
+# Docker
+Dockerfile text
+
+# Documentation
+*.ipynb text
+*.markdown text diff=markdown
+*.md text diff=markdown
+*.mdwn text diff=markdown
+*.mdown text diff=markdown
+*.mkd text diff=markdown
+*.mkdn text diff=markdown
+*.mdtxt text
+*.mdtext text
+*.txt text
+AUTHORS text
+CHANGELOG text
+CHANGES text
+CONTRIBUTING text
+COPYING text
+copyright text
+*COPYRIGHT* text
+INSTALL text
+license text
+LICENSE text
+NEWS text
+readme text
+*README* text
+TODO text
+
+# Templates
+*.dot text
+*.ejs text
+*.erb text
+*.haml text
+*.handlebars text
+*.hbs text
+*.hbt text
+*.jade text
+*.latte text
+*.mustache text
+*.njk text
+*.phtml text
+*.svelte text
+*.tmpl text
+*.tpl text
+*.twig text
+*.vue text
+
+# Configs
+*.cnf text
+*.conf text
+*.config text
+.editorconfig text
+.env text
+.gitattributes text
+.gitconfig text
+.htaccess text
+*.lock text -diff
+package.json text eol=lf
+package-lock.json text -diff
+pnpm-lock.yaml text eol=lf -diff
+.prettierrc text
+yarn.lock text -diff
+*.toml text
+*.yaml text
+*.yml text
+browserslist text
+Makefile text
+makefile text
+
+# Heroku
+Procfile text
+
+# Graphics
+# behavior for image files
+# image files are treated as binary by default.
+*.ai filter=lfs diff=lfs merge=lfs -text
+*.bmp filter=lfs diff=lfs merge=lfs -text
+*.dll filter=lfs diff=lfs merge=lfs -text
+*.eps filter=lfs diff=lfs merge=lfs -text
+*.gif filter=lfs diff=lfs merge=lfs -text
+*.gifv filter=lfs diff=lfs merge=lfs -text
+*.ico filter=lfs diff=lfs merge=lfs -text
+*.jng filter=lfs diff=lfs merge=lfs -text
+*.jp2 filter=lfs diff=lfs merge=lfs -text
+*.jpeg filter=lfs diff=lfs merge=lfs -text
+*.jpg filter=lfs diff=lfs merge=lfs -text
+*.jpx filter=lfs diff=lfs merge=lfs -text
+*.jxr filter=lfs diff=lfs merge=lfs -text
+*.pdf filter=lfs diff=lfs merge=lfs -text
+*.png filter=lfs diff=lfs merge=lfs -text
+*.psb filter=lfs diff=lfs merge=lfs -text
+*.psd filter=lfs diff=lfs merge=lfs -text
+*.sketch filter=lfs diff=lfs merge=lfs -text
+*.snk filter=lfs diff=lfs merge=lfs -text
+# SVG treated as an asset (filter=lfs diff=lfs merge=lfs -text) by default.
+*.svg filter=lfs diff=lfs merge=lfs -text
+# If you want to treat it as filter=lfs diff=lfs merge=lfs -text,
+# use the following line instead.
+# *.svg filter=lfs diff=lfs merge=lfs -text
+*.svgz filter=lfs diff=lfs merge=lfs -text
+*.tif filter=lfs diff=lfs merge=lfs -text
+*.tiff filter=lfs diff=lfs merge=lfs -text
+*.wbmp filter=lfs diff=lfs merge=lfs -text
+*.webp filter=lfs diff=lfs merge=lfs -text
+
+# Audio
+*.kar binary
+*.m4a binary
+*.mid binary
+*.midi binary
+*.mp3 binary
+*.ogg binary
+*.ra binary
+
+# Video
+*.3gpp filter=lfs diff=lfs merge=lfs -text
+*.3gp filter=lfs diff=lfs merge=lfs -text
+*.as filter=lfs diff=lfs merge=lfs -text
+*.asf filter=lfs diff=lfs merge=lfs -text
+*.asx filter=lfs diff=lfs merge=lfs -text
+*.avi filter=lfs diff=lfs merge=lfs -text
+*.fla filter=lfs diff=lfs merge=lfs -text
+*.flv filter=lfs diff=lfs merge=lfs -text
+*.m4v filter=lfs diff=lfs merge=lfs -text
+*.mng filter=lfs diff=lfs merge=lfs -text
+*.mov filter=lfs diff=lfs merge=lfs -text
+*.mp4 filter=lfs diff=lfs merge=lfs -text
+*.mpeg filter=lfs diff=lfs merge=lfs -text
+*.mpg filter=lfs diff=lfs merge=lfs -text
+*.ogv filter=lfs diff=lfs merge=lfs -text
+*.swc filter=lfs diff=lfs merge=lfs -text
+*.swf filter=lfs diff=lfs merge=lfs -text
+*.webm filter=lfs diff=lfs merge=lfs -text
+
+# Archives
+*.7z binary
+*.gz binary
+*.jar binary
+*.rar binary
+*.tar binary
+*.zip binary
+
+# Fonts
+*.ttf binary
+*.eot binary
+*.otf binary
+*.woff binary
+*.woff2 binary
+
+# RC files (like .babelrc or .eslintrc)
+*.*rc text
+
+###############################################################################
+# Make sure jQuery files always have LF as line endings (to pass SRI checks)
+###############################################################################
+jquery*.js eol=lf
+jquery*.map eol=lf
+
+###############################################################################
+# Make sure bootstrap files always have LF as line endings (to pass SRI checks)
+###############################################################################
+bootstrap*.js eol=lf
+bootstrap*.map eol=lf
+bootstrap*.css eol=lf
+
+###############################################################################
+# Set the merge driver for project and solution files
+#
+# Merging from the command prompt will add diff markers to the files if there
+# are conflicts (Merging from VS is not affected by the settings below, in VS
+# the diff markers are never inserted). Diff markers may cause the following
+# file extensions to fail to load in VS. An alternative would be to treat
+# these files as binary and thus will always conflict and require user
+# intervention with every merge. To do so, just uncomment the entries below
+###############################################################################
+*.sln text eol=crlf merge=union
+*.csproj text eol=crlf merge=union
+*.vbproj text eol=crlf merge=union
+*.vcxproj text eol=crlf merge=union
+*.vcproj text eol=crlf merge=union
+*.dbproj text eol=crlf merge=union
+*.fsproj text eol=crlf merge=union
+*.lsproj text eol=crlf merge=union
+*.wixproj text eol=crlf merge=union
+*.modelproj text eol=crlf merge=union
+*.sqlproj text eol=crlf merge=union
+*.wwaproj text eol=crlf merge=union
+
+*.xproj text eol=crlf merge=union
+*.props text eol=crlf merge=union
+*.filters text eol=crlf merge=union
+*.vcxitems text eol=crlf merge=union
+
+#*.sln merge=binary
+#*.csproj merge=binary
+#*.vbproj merge=binary
+#*.vcxproj merge=binary
+#*.vcproj merge=binary
+#*.dbproj merge=binary
+#*.fsproj merge=binary
+#*.lsproj merge=binary
+#*.wixproj merge=binary
+#*.modelproj merge=binary
+#*.sqlproj merge=binary
+#*.wwaproj merge=binary
+
+#*.xproj merge=binary
+#*.props merge=binary
+#*.filters merge=binary
+#*.vcxitems merge=binary
+
+###############################################################################
+# diff behavior for common document formats
+#
+# Convert binary document formats to text before diffing them. This feature
+# is only available from the command line. Turn it on by uncommenting the
+# entries below.
+###############################################################################
+#*.doc   diff=astextplain
+#*.DOC   diff=astextplain
+#*.docx  diff=astextplain
+#*.DOCX  diff=astextplain
+#*.dot   diff=astextplain
+#*.DOT   diff=astextplain
+#*.pdf   diff=astextplain
+#*.PDF   diff=astextplain
+#*.rtf   diff=astextplain
+#*.RTF   diff=astextplain
+*.pptx filter=lfs diff=lfs merge=lfs -text

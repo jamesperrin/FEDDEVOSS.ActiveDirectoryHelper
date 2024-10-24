@@ -1,0 +1,42 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ImplicitUsings>disabled</ImplicitUsings>
+    <Title>A .NET Standard C# class library exposing Active Directory data.</Title>
+    <Description>A .NET Standard C# class library exposing Active Directory data. This class library can be used in any Windows .NET Standard 2.0+, .NET Framework 4.6.1+, or .NET/.NET Core 2.0+ based projects.</Description>
+    <Copyright>Copyright (c) 2024 FED DEV Open Source Software.</Copyright>
+    <Company>FED DEV Open Source Software</Company>
+    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+    <Version>1.0.0</Version>
+    <AssemblyVersion>1.0.0</AssemblyVersion>
+    <FileVersion>1.0.0</FileVersion>
+    <BaseOutputPath>..\..\build</BaseOutputPath>
+    <PackageId>FEDDEVOSS.ActiveDirectoryHelper</PackageId>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+      <RepositoryUrl>https://github.com/jamesperrin/FEDDEVOSS.ActiveDirectoryHelper</RepositoryUrl>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <PackageProjectUrl>https://github.com/jamesperrin/FEDDEVOSS.ActiveDirectoryHelper</PackageProjectUrl>
+    <PackageTags>Microsoft Active Directory;LDAP;AD;.NET Standard;.NET Framework;.NET Core;C#</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.DirectoryServices" Version="8.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="README.md">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
